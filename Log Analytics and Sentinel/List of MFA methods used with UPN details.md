@@ -2,7 +2,7 @@
 Use this to identify users still using SMS for MFA
 
 ```kusto
-
+// A list of successfully completed MFA sign-ins, showing the MFA method used, the user (UPN), and the policy or reason that triggered MFA
 SigninLogs
 | where AuthenticationRequirement == "multiFactorAuthentication"
 | where ResultType == 0
